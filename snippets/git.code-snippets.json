@@ -1,0 +1,20 @@
+{
+  "Create git configuration": {
+    "prefix": "gitcc",
+    "body": [
+      "git config --global user.name \"$name\"",
+      "git config --global user.email \"$email\"",
+      "git config --global core.editor \"code --wait\"",
+      "git config --global diff.tool \"default-difftool\"",
+      "git config --global difftool.default-difftool.cmd \"code --wait --diff \\$LOCAL \\$REMOTE\"",
+      "$0"
+    ],
+    "description": "Create machine's git configuration"
+  },
+
+  "Show git configuration": {
+    "prefix": "gitsc",
+    "body": ["git config --list --show-origin", "$0"],
+    "description": "Show machine's git configuration"
+  }
+}
